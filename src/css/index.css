@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+#column1 {
+  width: 100%;
+  height: 259px;
+  background: url('../img/bg_01.jpg') no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  left: 20px;
+  top: 202px;
+}
+
+.nav-list-item {
+  font-size: 15px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background-color: #fb5afb;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav a {
+  color: #fff;
+  display: inlien-block;
+}
+
+.column1-tip {
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  top: 150px;
+}
+
+#column2 {
+  width: 100%;
+  height: 1014.75px;
+  background: url('../img/bg_02.jpg') no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.box .info {
+  width: 200px;
+}
+
+.box .info .title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.box {
+  font-size: 12px;
+  color: #fff;
+}
+
+#box1 .info {
+  position: absolute;
+  left: 80px;
+  bottom: 850px;
+}
+
+#box2 .info {
+  position: absolute;
+  left: 100px;
+  bottom: 620px;
+}
+
+#box3 .info {
+  position: absolute;
+  left: 80px;
+  bottom: 400px;
+}
+
+#box4 .info {
+  position: absolute;
+  left: 90px;
+  bottom: 170px;
+}
+
+.ellipsis {
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.showDetail {
+  color: #fce45e;
+  vertical-align: middle;
+}
+
+.hide {
+  display: none;
+}
+
+.takeBack {
+  color: #fce45e;
+  vertical-align: middle;
+}
+
+/* 道具有色 */
+#box1 .tools li:nth-child(1) {
+  background: url("../img/1/01.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(2) {
+  background: url("../img/1/02.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(3) {
+  background: url("../img/1/03.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(4) {
+  background: url("../img/1/04.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(5) {
+  background: url("../img/all.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(1) {
+  background: url("../img/2/01.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(2) {
+  background: url("../img/2/02.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(3) {
+  background: url("../img/2/03.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(4) {
+  background: url("../img/2/04.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(5) {
+  background: url("../img/all.png") no-repeat;
+}
+
+#box3 .tools li:nth-child(1) {
+  background: url("../img/3/01.png") no-repeat;
+}
+
+#box3 .tools li:nth-child(2) {
+  background: url("../img/3/02.png") no-repeat;
+}
+
+#box3 .tools li:nth-child(3) {
+  background: url("../img/3/03.png") no-repeat;
+}
+
+#box4 .tools li:nth-child(1) {
+  background: url("../img/4/01.png") no-repeat;
+}
+
+#box4 .tools li:nth-child(2) {
+  background: url("../img/4/02.png") no-repeat;
+}
+
+#box4 .tools li:nth-child(3) {
+  background: url("../img/all.png") no-repeat;
+}
+
+/* 道具灰色 */
+#box1 .tools li:nth-child(1).gray {
+  background: url("../img/1/01_gray.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(2).gray {
+  background: url("../img/1/02_gray.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(3).gray {
+  background: url("../img/1/03_gray.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(4).gray {
+  background: url("../img/1/04_gray.png") no-repeat;
+}
+
+#box1 .tools li:nth-child(5).gray {
+  background: url("../img/all_gray.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(1).gray {
+  background: url("../img/2/01_gray.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(2).gray {
+  background: url("../img/2/02_gray.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(3).gray {
+  background: url("../img/2/03_gray.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(4).gray {
+  background: url("../img/2/04_gray.png") no-repeat;
+}
+
+#box2 .tools li:nth-child(5).gray {
+  background: url("../img/all_gray.png") no-repeat;
+}
+
+#box3 .tools li:nth-child(1).gray {
+  background: url("../img/3/01_gray.png") no-repeat;
+}
+
+#box3 .tools li:nth-child(2).gray {
+  background: url("../img/3/02_gray.png") no-repeat;
+}
+
+#box3 .tools li:nth-child(3).gray {
+  background: url("../img/3/03_gray.png") no-repeat;
+}
+
+#box4 .tools li:nth-child(1).gray {
+  background: url("../img/4/01_gray.png") no-repeat;
+}
+
+#box4 .tools li:nth-child(2).gray {
+  background: url("../img/4/02_gray.png") no-repeat;
+}
+
+#box4 .tools li:nth-child(3).gray {
+  background: url("../img/all_gray.png") no-repeat;
+}
+
+#column2 .tools li {
+  width: 40px;
+  height: 29px;
+  background-size: 100% !important;
+}
+
+#column2 .tools li:last-child {
+  width: 37px;
+  height: 30px;
+}
+
+#box4 .tools li:last-child {
+  width: 40px;
+  height: 29px;
+}
+
+#column2 .box .tools {
+  position: absolute;
+}
+
+.tools li {
+  position: absolute;
+}
+
+#box1 .tools {
+  left: 120px;
+  top: 160px;
+}
+
+#box2 .tools {
+  left: 220px;
+  top: 385px;
+}
+
+#box3 .tools {
+  left: 150px;
+  top: 625px;
+}
+
+#box4 .tools {
+  left: 165px;
+  top: 845px;
+}
+
+.tools .left1 {
+  left: 50px;
+  top: 8px;
+}
+
+.tools .left2 {
+  left: 100px;
+  top: 18px;
+}
+
+.tools .left3 {
+  left: 150px;
+  top: 25px;
+}
+
+.tools .left4 {
+  left: 158px;
+  top: -22px;
+}
+
+.tools .right1 {
+  left: -50px;
+  top: 5px;
+}
+
+.tools .right2 {
+  left: -100px;
+  top: 12px;
+}
+
+.tools .right3 {
+  left: -158px;
+  top: 20px;
+}
+
+.tools .right4 {
+  left: -158px;
+  top: -35px;
+}
+
+/* dialog */
+.dialog-bg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.dialog-box {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 250px;
+  height: 140px;
+  z-index: 999;
+  background: #f1e9ff;
+  border-radius: 5px;
+  border: 1px solid #2f0080;
+}
+
+.dialog-top {
+  width: 100%;
+  height: 29px;
+  line-height: 29px;
+  font-size: 16px;
+  color: #2f0080;
+  text-align: center;
+  border-bottom: 1px solid #2f0080;
+  font-weight: bold;
+}
+
+.dialog-middle {
+  height: 40px;
+  padding: 10px;
+}
+
+.dialog-middle p {
+  text-indent: 2em;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.dialog-bottom {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  color: #2f0080;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.dialog-bottom button {
+  width: 90px;
+  height: 26px;
+  line-height: 26px;
+  background: #2f0080;
+  border: 0 none;
+  color: #ffffff;
+  border-radius: 3px;
+  margin: 7px 0;
+}
+
