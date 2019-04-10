@@ -76,22 +76,46 @@ body {
 #box1 .info {
   position: absolute;
   left: 80px;
-  bottom: 850px;
+  bottom: 870px;
 }
 
 #box2 .info {
   position: absolute;
-  left: 100px;
-  bottom: 620px;
+  left: 110px;
+  bottom: 640px;
 }
 
 #box3 .info {
   position: absolute;
   left: 80px;
-  bottom: 400px;
+  bottom: 420px;
 }
 
 #box4 .info {
+  position: absolute;
+  left: 90px;
+  bottom: 190px;
+}
+
+#box1 .all-info {
+  position: absolute;
+  left: 80px;
+  bottom: 850px;
+}
+
+#box2 .all-info {
+  position: absolute;
+  left: 110px;
+  bottom: 620px;
+}
+
+#box3 .all-info {
+  position: absolute;
+  left: 80px;
+  bottom: 400px;
+}
+
+#box4 .all-info {
   position: absolute;
   left: 90px;
   bottom: 170px;

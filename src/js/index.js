@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
   let login = false
 
   // 登录请求
-  $.ajax({
+  jQuery.ajax({
     url: oPageConfig.oPageUrl.loginUrl,
     type: 'get'
   }).done(function (msg) {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
   })
 
   // 道具获取状态
-  $.ajax({
+  jQuery.ajax({
     url: oPageConfig.oPageUrl.toolStatuUrl,
     type: 'get'
   }).done(function (msg) {
@@ -28,20 +28,22 @@ document.addEventListener('DOMContentLoaded', function (e) {
   })
 
 // 点击查看栏目详情
-$('.showDetail').click(function (ev) {
-  let index = $(ev.target).attr('data-index')
-  $(ev.target).addClass('hide')
+$('.showDetail').on('tap', function () {
+  let index = $(this).attr('data-index')
+  $(this).addClass('hide')
   let con = $('.info').eq(index)
+  con.addClass('all-info')
   con.find('.mid').removeClass('ellipsis')
   con.find('.beh').removeClass('hide')
   con.find('.takeBack').removeClass('hide')
 })
 
 // 点击收回栏目详情
-$('.takeBack').click(function (ev) {
-  let index = $(ev.target).attr('data-index')
-  $(ev.target).addClass('hide')
+$('.takeBack').on('tap', function () {
+  let index = $(this).attr('data-index')
+  $(this).addClass('hide')
   let con = $('.info').eq(index)
+  con.removeClass('all-info')
   con.find('.mid').addClass('ellipsis')
   con.find('.beh').addClass('hide')
   con.find('.showDetail').removeClass('hide')
@@ -67,7 +69,7 @@ $('.hide').on('click', function () {
 })
 
 // 道具点击获取
-option.find('.tool-item').on('click', function () {
+option.find('.tool-item').on('tap', function () {
   let isGotten = $(this).hasClass('gray')
   if (isGotten) {
     $('.dialog-text').text('亲，道具已经领取过了哦，请在您的邮箱中查看！！！')
@@ -95,7 +97,7 @@ option.find('.tool-item').on('click', function () {
     all = option4.find('.tool-item')
   }
   // 弹出确定框
-  $.ajax({
+  jQuery.ajax({
     url,
     type: 'get'
   }).done(function (msg) {
