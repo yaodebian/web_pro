@@ -1,31 +1,46 @@
-document.addEventListener('DOMContentLoaded', function (e) {
-  document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+// 根据设备尺寸动态计算设备rem基准值
+(function (doc, win) {
+  var docEl = doc.documentElement;
+  var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+  var recalc = function () {
+    var clientWidth = docEl.clientWidth;
+    if (!clientWidth) {
+      return true;
+    }
+    docEl.style.fontSize = 36 * (clientWidth / 360) + 'px';
+  };
+  if (!doc.addEventListener) {
+    return true;
+  }
+
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+// 登录状态
+let login = false
+
+// 登录请求
+jQuery.ajax({
+  url: oPageConfig.oPageUrl.loginUrl,
+  type: 'get'
+}).done(function (msg) {
+  if (msg) {
+    login = true
+  }
 })
 
-  // 登录状态
-  let login = false
-
-  // 登录请求
-  jQuery.ajax({
-    url: oPageConfig.oPageUrl.loginUrl,
-    type: 'get'
-  }).done(function (msg) {
-    if (msg) {
-      login = true
+// 道具获取状态
+jQuery.ajax({
+  url: oPageConfig.oPageUrl.toolStatuUrl,
+  type: 'get'
+}).done(function (msg) {
+  for (let i in msg.data) {
+    if (msg.data[i]) {
+      toolGotten(i)
     }
-  })
-
-  // 道具获取状态
-  jQuery.ajax({
-    url: oPageConfig.oPageUrl.toolStatuUrl,
-    type: 'get'
-  }).done(function (msg) {
-    for (let i in msg.data) {
-      if (msg.data[i]) {
-        toolGotten(i)
-      }
-    }
-  })
+  }
+})
 
 // 点击查看栏目详情
 $('.showDetail').on('tap', function () {
