@@ -1,7 +1,6 @@
-$.noConflict()
 +function () {
-    jQuery.ajax = function (options) {
-        var dfd = jQuery.Deferred(),
+    $.ajax = function (options) {
+        var dfd = $.Deferred(),
             data = {},
             url = options.url,
             code = '0',

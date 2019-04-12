@@ -21,7 +21,7 @@
 let login = false
 
 // 登录请求
-jQuery.ajax({
+$.ajax({
   url: oPageConfig.oPageUrl.loginUrl,
   type: 'get'
 }).done(function (msg) {
@@ -31,7 +31,7 @@ jQuery.ajax({
 })
 
 // 道具获取状态
-jQuery.ajax({
+$.ajax({
   url: oPageConfig.oPageUrl.toolStatuUrl,
   type: 'get'
 }).done(function (msg) {
@@ -43,7 +43,7 @@ jQuery.ajax({
 })
 
 // 点击查看栏目详情
-$('.showDetail').on('tap', function () {
+$('.showDetail').click(function () {
   let index = $(this).attr('data-index')
   $(this).addClass('hide')
   let con = $('.info').eq(index)
@@ -54,7 +54,7 @@ $('.showDetail').on('tap', function () {
 })
 
 // 点击收回栏目详情
-$('.takeBack').on('tap', function () {
+$('.takeBack').click(function () {
   let index = $(this).attr('data-index')
   $(this).addClass('hide')
   let con = $('.info').eq(index)
@@ -73,18 +73,18 @@ let option3 = $('#box3')
 let option4 = $('#box4')
 
 // 活动关闭
-$('.confirm').on('click', function () {
+$('.confirm').click(function () {
   $('.dialog-box').hide()
   dialog_bg.hide()
 })
 
-$('.hide').on('click', function () {
+$('.hide').click(function () {
   $('.dialog-box').hide()
   dialog_bg.hide()
 })
 
 // 道具点击获取
-option.find('.tool-item').on('tap', function () {
+option.find('.tool-item').click(function () {
   let isGotten = $(this).hasClass('gray')
   if (isGotten) {
     $('.dialog-text').text('亲，道具已经领取过了哦，请在您的邮箱中查看！！！')
@@ -112,7 +112,7 @@ option.find('.tool-item').on('tap', function () {
     all = option4.find('.tool-item')
   }
   // 弹出确定框
-  jQuery.ajax({
+  $.ajax({
     url,
     type: 'get'
   }).done(function (msg) {
