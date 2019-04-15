@@ -143,7 +143,7 @@ $('.hide').click(function () {
     } else if (tag === '2') {
       index === 'e' ? target = option2.find('.tool-item') : target = self
     } else if (tag === '3') {
-     target = self
+      target = self
     } else if (tag === '4') {
       index === 'e' ? target = option4.find('.tool-item') : target = self
     }
